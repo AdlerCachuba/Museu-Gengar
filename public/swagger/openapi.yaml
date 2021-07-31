@@ -1,0 +1,153 @@
+openapi: 3.0.1
+info:
+  title: Gengar-API
+  deion: Documentação do projeto Gengar-API
+  contact:
+    email: adlermateuself@gmail.com
+  version: 1.0.0
+servers:
+- url: http://localhost:8000/
+tags:
+- name: Obra
+  deion: Cadastro de Obras do museu
+paths:
+  /api/obra:
+    get:
+      tags:
+      - Obra
+      summary: Retorna todas obras do museu
+      responses:
+        200:
+          deion: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Obra'
+    post:
+      tags:
+      - Obra
+      summary: Cria uma obra
+      requestBody:
+        deion: A Obra com os seus atributos
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Obra'
+        required: true
+      responses:
+        405:
+          deion: Validation exception
+          content: {}
+        200:
+          deion: Obra Criada
+          content: {}
+  /api/obra/{obraId}:
+    get:
+      tags:
+      - Obra
+      summary: Retorna uma obra do museu
+      parameters:
+      - name: obraId
+        in: path
+        deion: ID da obra
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        400:
+          deion: ID inválido
+          content: {}
+        404:
+          deion: Obra não encontrada
+          content: {}
+        200:
+          deion: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Obra'
+    put:
+      tags:
+      - Obra
+      summary: Atualiza uma obra
+      parameters:
+      - name: obraId
+        in: path
+        deion: ID da obra
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        deion: A Obra com os atributos a serem atualizados
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Obra'
+        required: true
+      responses:
+        400:
+          deion: ID inválido
+          content: {}
+        404:
+          deion: Obra não encontrada
+          content: {}
+        405:
+          deion: Validation exception
+          content: {}
+        200:
+          deion: Obra alterada
+          content: {}
+    delete:
+      tags:
+      - Obra
+      summary: Deleta uma obra
+      parameters:
+      - name: obraId
+        in: path
+        deion: ID da obra
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        400:
+          deion: ID inválido
+          content: {}
+        404:
+          deion: Obra não encontrada
+          content: {}
+        200:
+          deion: Obra deletada
+          content: {}
+components:
+  schemas:
+    Obra:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        nome:
+          type: string
+        quantidade:
+          type: integer
+          format: int32
+        secao_id:
+          type: integer
+          format: date-time
+    Secao:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        nome:
+          type: string
+        status:
+          type: string

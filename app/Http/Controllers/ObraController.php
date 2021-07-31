@@ -8,11 +8,21 @@ use Illuminate\Http\Request;
 
 class ObraController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+/**
+ * @OA\Get(
+ *     path="/index",
+ *     description="Return a Course´s name",
+ *     @OA\Response(
+ *         response=200,
+ *         description="OK",
+ *     ),
+ *     @OA\Response(
+ *         response=422,
+ *         description="Missing Data"
+ *     )
+ * )
+ */
+
     public function index()
     {
         $obra = Obra::all();
