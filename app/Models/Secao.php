@@ -8,6 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Secao extends Model
 {
     use HasFactory;
-    protected $fillable = ["nome","status"];
-    
+    protected $fillable = ["nome","status"];  
 }

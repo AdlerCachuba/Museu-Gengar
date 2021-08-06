@@ -10,6 +10,7 @@ servers:
 tags:
 - name: Obra
   deion: Cadastro de Obras do museu
+  
 paths:
   /api/obra:
     get:
