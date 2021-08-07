@@ -28,7 +28,6 @@ class ObraController extends Controller
         $obra = Obra::all();
         return response()->json($obra);
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -48,7 +47,6 @@ class ObraController extends Controller
         //retorna o json de 201, foi criado.
         return response()->json($obra,201);
     }
-
     /**
      * Display the specified resource.
      *
@@ -59,7 +57,6 @@ class ObraController extends Controller
     {
         return response()->json($obra,200);
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -85,7 +82,6 @@ class ObraController extends Controller
         //retorna o json de 200, foi atualizado.
         return response()->json($obra,200);
     }
-
     /**
      * Remove the specified resource from storage.
      *

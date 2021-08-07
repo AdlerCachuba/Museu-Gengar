@@ -1,5 +1,6 @@
 ## Sobre o Projeto
-O objetivo desse projeto é criar uma API Rest de um museu. 
+O objetivo desse projeto é criar uma API Rest de um museu. A API é um conjunto de definições e protocolos usado no desenvolvimento e na integração de aplicações. E o REST é um conjunto de restrições de arquitetura que a API precisa seguir.
+
 
 ## Disciplinas
 
