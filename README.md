@@ -8,7 +8,7 @@ Estão envolvidas as disciplinas de Construção de Software e Tecnologias Web d
 
 ## Linguagens
 
-Laravel, php 7.4
+Laravel, php 7.4.
 
 ## Ferramentas 
 
