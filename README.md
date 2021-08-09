@@ -8,11 +8,11 @@ Estão envolvidas as disciplinas de Construção de Software e Tecnologias Web d
 
 ## Linguagens
 
-Laravel, php 7.4.
+Laravel, PHP 7.4.
 
 ## Ferramentas 
 
-Uma das ferramentas que pode ser utilizada para testar a API é o Postman.
+Uma das ferramentas que pode ser utilizada para testar a API é o Postman, ou o Swagger implementado.
 
 ## Como iniciar
 Para dar inicio ao projeto, é necessário rodar o seguinte comando:
