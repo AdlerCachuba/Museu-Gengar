@@ -79,7 +79,6 @@ class SecaoController extends Controller
      */
     public function destroy(Secao $secao)
     {
-        
         $secao->delete();
         return response()->noContent(204);
         //retorna 204, porque não tem nada para voltar.
