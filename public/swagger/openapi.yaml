@@ -135,6 +135,8 @@ components:
           format: int64
         nome:
           type: string
+        status:
+          type: string
         quantidade:
           type: integer
           format: int32
