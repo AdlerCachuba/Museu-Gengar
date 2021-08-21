@@ -12,7 +12,7 @@ Laravel, PHP 7.4.
 
 ## Ferramentas 
 
-Uma das ferramentas que pode ser utilizada para testar a API é o Postman, ou o Swagger implementado.
+Uma das ferramentas que pode ser utilizada para testar a API é o Postman, ou o Swagger.
 
 ## Como iniciar
 Para dar inicio ao projeto, é necessário rodar o seguinte comando:
@@ -21,6 +21,17 @@ Para dar inicio ao projeto, é necessário rodar o seguinte comando:
 php artisan serve
 ```
 
+E se desejar ver os testes realizados:
+
+```bash
+php artisan test
+```
+
+Para acessar o Swagger:
+
+```bash
+http://127.0.0.1:8000/swagger/
+```
 ## Rotas
 
 Para saber quais rotas foram implementadas, deve usar o comando:
